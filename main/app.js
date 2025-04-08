@@ -1,4 +1,6 @@
-let numeroSecreto = parseInt(Math.random() * 100 + 1);
+let numeroMax = 100;
+let numeroMin = 1;
+let numeroSecreto = parseInt(Math.random() * numeroMax + 1);
 console.log(numeroSecreto);
 let tentativas = 0;
 let numeroEscolhido;
@@ -7,7 +9,7 @@ let numeroEscolhido;
 while(numeroEscolhido != numeroSecreto){
     tentativas++;
     let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-    numeroEscolhido = prompt('Chute um número entre 1 e 100: ');
+    numeroEscolhido = prompt(`Chute um número entre ${numeroMin} e ${numeroMax}`); 
 
     // if(numeroEscolhido == numeroSecreto && tentativas == 1){
     if(numeroEscolhido == numeroSecreto){
